@@ -2,12 +2,13 @@ const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
 const TodoModel = require('./models/todo.js');
+require('dotenv').config();
 
 const app = express();
 app.use(cors());
 app.use(express.json());
 
-const CONNECTION_URL = 'mongodb+srv://todolist:todolist@cluster0.hrz5w1t.mongodb.net/';
+const CONNECTION_URL = process.env.CONNECTION_URL;;
 const PORT = process.env.PORT || 3001;
 
 mongoose.connect(CONNECTION_URL)
