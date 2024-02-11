@@ -8,7 +8,7 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-const CONNECTION_URL = process.env.CONNECTION_URL;;
+const CONNECTION_URL = process.env.CONNECTION_URL;
 const PORT = process.env.PORT || 3001;
 
 mongoose.connect(CONNECTION_URL)
